@@ -1,26 +1,43 @@
-# WAVE OFF - Static Band Website
+# WAVE OFF – Official Band Website
 
-Diese einfache, statische Webseite ist für die Band **WAVE OFF** bestimmt. Sie nutzt HTML und CSS und kann direkt über GitHub Pages veröffentlicht werden.
+Official website of **WAVE OFF**, a Love Drunk Indie Punk band from Mannheim, Germany.
 
-## Struktur
+🌐 **Live:** [wave-off-band.github.io/Wave-Off-Bandpage](https://wave-off-band.github.io/Wave-Off-Bandpage)
 
-- `index.html` – die Hauptseite
-- `assets/` – enthält Bilder, Icons und CSS
-  - `assets/css/style.css` – grundlegendes Styling
-  - `assets/images/` – Logo, Header und Galeriebilder
-  - `assets/icons/` – Social-/Musikplattform-Icons
+## About
 
-## Veröffentlichung auf GitHub Pages
+WAVE OFF is a 5-piece indie punk band from Mannheim, Germany. Their sound draws from 2000s indie, surf punk, garage rock and post-hardcore — nostalgic yet refreshingly modern.
 
-1. Repository erstellen (z. B. `wave-off-site`) und den gesamten Ordnerinhalt per `git` pushen.
-2. In den Repository-Einstellungen unter **Pages** den Branch `main` (oder `master`) auswählen und das Verzeichnis `/` oder `/docs` angeben.
-3. Nach ein paar Minuten ist die Seite unter `https://<username>.github.io/<repo-name>/` erreichbar.
+📩 Booking: [booking@wave-off.de](mailto:booking@wave-off.de)
 
-> Optional: einen `CNAME`-Datei hinzufügen, wenn eine benutzerdefinierte Domain verwendet wird.
+## Features
 
-## Anpassungen
+- New single **BURNING OUT** with Spotify embed
+- YouTube videos
+- Photo gallery
+- Band biography
+- GDPR-compliant cookie consent for embedded content
+- Impressum & Datenschutzerklärung
 
-- `index.html` kann leicht erweitert werden (z. B. weitere Sektionen, Tourdaten).
-- `assets/css/style.css` enthält Kommentare und Variablen für einfache Anpassung.
+## Tech Stack
 
-Viel Erfolg mit eurer Site! 😊
+- HTML5
+- CSS3 (Flexbox & Grid)
+- Vanilla JavaScript
+- Hosted on GitHub Pages
+
+## Structure
+
+├── index.html
+├── impressum.html
+├── datenschutz.html
+└── assets/
+├── css/
+│ └── style.css
+├── images/
+└── icons/
+
+
+## Legal
+
+© 2026 WAVE OFF GbR. All rights reserved.
