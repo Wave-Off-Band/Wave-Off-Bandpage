@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAVE OFF – Official Site</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="assets/images/wave_off_logo_blume_weiss-schwarz.png" alt="WAVE OFF Logo" />
+            </a>
+            <h1 class="band-name">Love Drunk Indie Punk from Mannheim, Germany</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="assets/images/wave-off-header.jpeg" alt="WAVE OFF Header" />
+    </section>
+
+    <main class="container">
+        <section class="release">
+            <div class="release-grid">
+                <div class="cover">
+                    <img src="assets/images/burning-out-cover.jpg" alt="WAVE OFF Cover" />
+                </div>
+
+                <div class="info">
+                    <p>New Single </p>
+                    <p>BURNING OUT</p>
+                    <p>Available on all platforms!</p>
+                    <p class="listen-now">
+                    </p>
+                    <nav class="stream-links">
+                        <a href="#" title="Spotify"><img src="assets/icons/spotify.svg" alt="Spotify" /></a>
+                        <a href="#" title="Bandcamp"><img src="assets/icons/bandcamp.svg" alt="Bandcamp" /></a>
+                        <a href="#" title="YouTube"><img src="assets/icons/youtube.svg" alt="YouTube" /></a>
+                        <a href="#" title="Deezer"><img src="assets/icons/deezer.svg" alt="Deezer" /></a>
+                        <a href="#" title="Apple Music"><img src="assets/icons/apple.svg" alt="Apple Music" /></a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="bio">
+            <h2>About</h2>
+            <p>
+                You find yourself on one of those late summer evenings, the sun sinking below the horizon and painting
+                the sky in shades of orange and violet. You soak in its warmth, knowing there aren't many of these
+                evenings left before autumn sets in. That's exactly the vibe Mannheim-based indie punk band WAVE OFF
+                captures with their catchy yet raw sound.
+            </p>
+            <p>
+                The band's influences span a wide range — from 2000s indie and surf punk to garage rock and
+                post-hardcore. They bring these influences together in their own unique way, creating a sound that feels
+                both nostalgic and refreshingly modern.
+            </p>
+        </section>
+
+        <section class="videos">
+            <h2>Videos</h2>
+            <div class="video-grid">
+                <div class="video-wrap">
+                    <div class="embed-placeholder" id="placeholder-yt1">
+                        <p>🎬 YouTube-Video</p>
+                        <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
+                        <button onclick="acceptCookies()">Akzeptieren & laden</button>
+                    </div>
+                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube.com/embed/dzsa-7BXqAc"
+                        title="WAVE OFF Video 1" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="video-wrap">
+                    <div class="embed-placeholder" id="placeholder-yt2">
+                        <p>🎬 YouTube-Video</p>
+                        <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
+                        <button onclick="acceptCookies()">Akzeptieren & laden</button>
+                    </div>
+                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube.com/embed/yTBpDd-Tu78"
+                        title="WAVE OFF Video 2" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="spotify-embed">
+            <h2>Streaming</h2>
+            <div class="embed-placeholder" id="placeholder-spotify">
+                <p>🎵 Spotify Player</p>
+                <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
+                <button onclick="acceptCookies()">Akzeptieren & laden</button>
+            </div>
+            <iframe class="lazy-embed" style="display:none"
+                data-src="https://open.spotify.com/embed/track/5nPKQKmygbro6AmpE554iu?utm_source=generator&theme=0"
+                style="border-radius:12px" width="100%" height="152" frameborder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </section>
+
+
+        <section class="gallery">
+            <h2>Gallery </h2>
+            <div class="grid">
+                <div class="portrait-wrap">
+                    <img src="assets/images/wave-off-gallery-1.jpeg" alt="Galerie Bild 1" />
+                </div>
+                <div class="portrait-wrap">
+                    <img src="assets/images/wave-off-gallery-2.jpeg" alt="Galerie Bild 2" />
+                </div>
+                <div class="landscape-stack">
+                    <img src="assets/images/wave-off-gallery-3.jpg" alt="Galerie Bild 3" />
+                    <img src="assets/images/wave-off-gallery-4.jpg" alt="Galerie Bild 4" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 WAVE OFF. All rights reserved.</p>
+        <p>
+            <a href="impressum.html" style="color: #ccc;">Impressum</a>
+            &nbsp;·&nbsp;
+            <a href="datenschutz.html" style="color: #ccc;">Datenschutz</a>
+        </p>
+    </div>
+</footer>
+
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>
+            Diese Website verwendet externe Inhalte von YouTube und Spotify,
+            die Cookies setzen können.
+            <a href="datenschutz.html">Mehr erfahren</a>
+        </p>
+        <button onclick="acceptCookies()">Akzeptieren</button>
+    </div>
+
+    <script>
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookieBanner').style.display = 'flex';
+        } else {
+            loadEmbeds();
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+            loadEmbeds();
+        }
+
+        function loadEmbeds() {
+            document.querySelectorAll('.lazy-embed').forEach(iframe => {
+                iframe.src = iframe.dataset.src;
+                iframe.style.display = 'block';
+            });
+            document.querySelectorAll('.embed-placeholder').forEach(p => {
+                p.style.display = 'none';
+            });
+        }
+    </script>
+
+</body>
+
+</html>
