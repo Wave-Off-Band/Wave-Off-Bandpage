@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WAVE OFF – Love Drunk Indie Punk from Mannheim, Germany. Discover our music, videos, and latest single Burning Out." />
+    <meta property="og:title" content="WAVE OFF – Official Site" />
+    <meta property="og:description" content="Love Drunk Indie Punk from Mannheim, Germany. Discover our music, videos, and latest single Burning Out." />
+    <meta property="og:image" content="https://wave-off.de/assets/images/wave-off-header.jpeg" />
+    <meta property="og:url" content="https://wave-off.de" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WAVE OFF" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <title>WAVE OFF – Official Site</title>
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -70,7 +78,7 @@
                         <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
                         <button onclick="acceptCookies()">Akzeptieren & laden</button>
                     </div>
-                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube.com/embed/giV6XZrPTf8"
+                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube-nocookie.com/embed/giV6XZrPTf8"
                         title="WAVE OFF Video 3" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -82,7 +90,7 @@
                         <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
                         <button onclick="acceptCookies()">Akzeptieren & laden</button>
                     </div>
-                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube.com/embed/dzsa-7BXqAc"
+                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube-nocookie.com/embed/dzsa-7BXqAc"
                         title="WAVE OFF Video 1" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -94,7 +102,7 @@
                         <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
                         <button onclick="acceptCookies()">Akzeptieren & laden</button>
                     </div>
-                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube.com/embed/yTBpDd-Tu78"
+                    <iframe class="lazy-embed" style="display:none" data-src="https://www.youtube-nocookie.com/embed/yTBpDd-Tu78"
                         title="WAVE OFF Video 2" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -122,14 +130,14 @@
             <h2>Gallery </h2>
             <div class="grid">
                 <div class="portrait-wrap">
-                    <img src="assets/images/wave-off-gallery-1.jpeg" alt="Galerie Bild 1" />
+                    <img src="assets/images/wave-off-gallery-1.jpeg" alt="Galerie Bild 1" width="650" height="867" loading="lazy" />
                 </div>
                 <div class="portrait-wrap">
-                    <img src="assets/images/wave-off-gallery-2.jpeg" alt="Galerie Bild 2" />
+                    <img src="assets/images/wave-off-gallery-2.jpeg" alt="Galerie Bild 2" width="650" height="865" loading="lazy" />
                 </div>
                 <div class="landscape-stack">
-                    <img src="assets/images/wave-off-gallery-3.jpg" alt="Galerie Bild 3" />
-                    <img src="assets/images/wave-off-gallery-4.jpg" alt="Galerie Bild 4" />
+                    <img src="assets/images/wave-off-gallery-3.jpg" alt="Galerie Bild 3" width="1000" height="667" loading="lazy" />
+                    <img src="assets/images/wave-off-gallery-4.jpg" alt="Galerie Bild 4" width="1000" height="667" loading="lazy" />
                 </div>
             </div>
         </section>
@@ -137,6 +145,20 @@
 
 <footer class="site-footer">
     <div class="container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/wave_off_band/" target="_blank" rel="noopener" title="Instagram">
+                <img src="assets/icons/instagram.svg" alt="Instagram" width="22" height="22" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCpTd8ut83OUoBKfEJ2M0SAQ" target="_blank" rel="noopener" title="YouTube">
+                <img src="assets/icons/youtube.svg" alt="YouTube" width="22" height="22" />
+            </a>
+            <a href="https://waveoff.bandcamp.com" target="_blank" rel="noopener" title="Bandcamp">
+                <img src="assets/icons/bandcamp.svg" alt="Bandcamp" width="22" height="22" />
+            </a>
+            <a href="https://open.spotify.com/intl-de/track/5nPKQKmygbro6AmpE554iu?si=4570b2b3e1864f5b" target="_blank" rel="noopener" title="Spotify">
+                <img src="assets/icons/spotify.svg" alt="Spotify" width="22" height="22" />
+            </a>
+        </div>
         <p>&copy; 2026 WAVE OFF. All rights reserved.</p>
         <p>
             <a href="impressum.html" style="color: #ccc;">Impressum</a>
@@ -154,20 +176,32 @@
             die Cookies setzen können.
             <a href="datenschutz.html">Mehr erfahren</a>
         </p>
-        <button onclick="acceptCookies()">Akzeptieren</button>
+        <div class="cookie-banner-actions">
+            <button onclick="declineCookies()">Ablehnen</button>
+            <button onclick="acceptCookies()">Akzeptieren</button>
+        </div>
     </div>
 
     <script>
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookieBanner').style.display = 'flex';
-        } else {
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
             loadEmbeds();
+        } else if (localStorage.getItem('cookiesDeclined') === 'true') {
+            // do nothing — embeds stay hidden
+        } else {
+            document.getElementById('cookieBanner').style.display = 'flex';
         }
 
         function acceptCookies() {
             localStorage.setItem('cookiesAccepted', 'true');
+            localStorage.removeItem('cookiesDeclined');
             document.getElementById('cookieBanner').style.display = 'none';
             loadEmbeds();
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookiesDeclined', 'true');
+            localStorage.removeItem('cookiesAccepted');
+            document.getElementById('cookieBanner').style.display = 'none';
         }
 
         function loadEmbeds() {

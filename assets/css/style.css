@@ -20,6 +20,12 @@
     text-decoration: underline;
 }
 
+.cookie-banner-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
 .cookie-banner button {
     background: #fff;
     color: #111;
@@ -33,6 +39,17 @@
 
 .cookie-banner button:hover {
     background: #ddd;
+}
+
+.cookie-banner button:first-child {
+    background: transparent;
+    color: #aaa;
+    border: 1px solid #555;
+}
+
+.cookie-banner button:first-child:hover {
+    color: #fff;
+    border-color: #888;
 }
 
 /* Basic resets */
@@ -363,6 +380,28 @@ body {
     margin-top: 2rem;
 }
 
+.site-footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.site-footer .social-links a {
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.site-footer .social-links a:hover {
+    opacity: 0.7;
+}
+
+.site-footer .social-links img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(0.8);
+}
+
 /* Legal / Impressum */
 .legal {
     margin: 3rem auto;
@@ -399,4 +438,36 @@ body {
     margin-bottom: 0.25rem;
     font-size: 0.95rem;
     color: #222;
+}
+
+/* Mobile: gallery & release grid */
+@media (max-width: 600px) {
+    .gallery .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .portrait-wrap {
+        grid-row: auto;
+    }
+
+    .portrait-wrap img {
+        aspect-ratio: auto;
+        height: auto;
+    }
+
+    .landscape-stack {
+        display: block;
+    }
+
+    .release-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .release-grid .cover {
+        flex: none;
+        max-width: 140px;
+        margin: 0 auto;
+    }
 }
