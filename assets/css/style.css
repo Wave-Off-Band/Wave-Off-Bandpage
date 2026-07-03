@@ -466,13 +466,13 @@ a:hover {
     background: #ddd;
 }
 
-.cookie-banner button:first-child {
+.cookie-banner .btn-decline {
     background: transparent;
     color: #888;
     border: 1px solid #444;
 }
 
-.cookie-banner button:first-child:hover {
+.cookie-banner .btn-decline:hover {
     color: #ccc;
     border-color: #777;
 }
@@ -483,6 +483,15 @@ a:hover {
 .legal {
     margin: 3rem auto;
     max-width: 600px;
+}
+
+.legal h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
 }
 
 .legal h2 {
@@ -634,8 +643,18 @@ a:hover {
     z-index: 2001;
 }
 
-.lightbox-close:hover {
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
     color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.lightbox img:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+    border-radius: 4px;
 }
 
 @keyframes lb-fade-in {
