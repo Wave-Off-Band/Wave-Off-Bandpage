@@ -55,7 +55,12 @@
                 <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
                 <button onclick="acceptCookies()">Akzeptieren & laden</button>
             </div>
-            <div id="bit-widget-container" style="display:none"></div>
+            <div id="bit-widget-container" style="display:none">
+                <a class="bit-widget-initializer"
+                   data-artist-name="id_15655258"
+                   data-app-id="1a47f4992e2a498eb68a34ac1f1f2947"
+                   data-play-my-city-position="bottom"></a>
+            </div>
         </section>
 
         <section class="bio">
@@ -220,14 +225,7 @@
             // Bandsintown widget
             if (!bandsintownLoaded) {
                 bandsintownLoaded = true;
-                const container = document.getElementById('bit-widget-container');
-                container.style.display = 'block';
-                const widget = document.createElement('a');
-                widget.className = 'bit-widget-initializer';
-                widget.dataset.artistName = 'id_15655258';
-                widget.dataset.appId = '1a47f4992e2a498eb68a34ac1f1f2947';
-                widget.dataset.playMyCityPosition = 'bottom';
-                container.appendChild(widget);
+                document.getElementById('bit-widget-container').style.display = 'block';
                 const script = document.createElement('script');
                 script.charset = 'utf-8';
                 script.src = 'https://widgetv3.bandsintown.com/main.min.js';
