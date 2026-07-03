@@ -225,6 +225,13 @@ a:hover {
     min-height: 100px;
 }
 
+#bit-widget-container {
+    background: var(--bg);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
 /* ==============================================
    BIO
    ============================================== */

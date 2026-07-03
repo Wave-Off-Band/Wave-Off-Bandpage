@@ -61,6 +61,11 @@
                    data-app-id="1a47f4992e2a498eb68a34ac1f1f2947"
                    data-play-my-city-position="bottom"></a>
             </div>
+            <script>
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                document.write('<script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"><\/script>');
+            }
+            </script>
         </section>
 
         <section class="bio">
@@ -203,16 +208,13 @@
         function acceptCookies() {
             localStorage.setItem('cookiesAccepted', 'true');
             localStorage.removeItem('cookiesDeclined');
-            document.getElementById('cookieBanner').style.display = 'none';
-            loadEmbeds();
+            location.reload();
         }
         function declineCookies() {
             localStorage.setItem('cookiesDeclined', 'true');
             localStorage.removeItem('cookiesAccepted');
             document.getElementById('cookieBanner').style.display = 'none';
         }
-        let bandsintownLoaded = false;
-
         function loadEmbeds() {
             document.querySelectorAll('.lazy-embed').forEach(iframe => {
                 iframe.src = iframe.dataset.src;
@@ -222,15 +224,9 @@
                 p.style.display = 'none';
             });
 
-            // Bandsintown widget
-            if (!bandsintownLoaded) {
-                bandsintownLoaded = true;
-                document.getElementById('bit-widget-container').style.display = 'block';
-                const script = document.createElement('script');
-                script.charset = 'utf-8';
-                script.src = 'https://widgetv3.bandsintown.com/main.min.js';
-                document.body.appendChild(script);
-            }
+            // Bandsintown: script loads natively via document.write in <head>
+            var bitContainer = document.getElementById('bit-widget-container');
+            if (bitContainer) bitContainer.style.display = 'block';
         }
         // Lightbox
         const lb = document.getElementById('lightbox');
