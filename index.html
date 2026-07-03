@@ -47,6 +47,17 @@
                 </div>
             </div>
         </section>
+
+        <section class="shows">
+            <h2>Live Shows</h2>
+            <div class="embed-placeholder" id="placeholder-bit">
+                <p>🎸 Tour Dates</p>
+                <p>Externe Inhalte laden Cookies. Bitte zustimmen.</p>
+                <button onclick="acceptCookies()">Akzeptieren & laden</button>
+            </div>
+            <div id="bit-widget-container" style="display:none"></div>
+        </section>
+
         <section class="bio">
             <h2>About</h2>
             <p>
@@ -164,7 +175,7 @@
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookieBanner">
         <p>
-            Diese Website verwendet externe Inhalte von YouTube und Spotify,
+            Diese Website verwendet externe Inhalte von YouTube, Spotify und Bandsintown,
             die Cookies setzen können. Ihre Auswahl wird im lokalen Speicher (localStorage) Ihres Browsers gespeichert.
             <a href="datenschutz.html">Mehr erfahren</a>
         </p>
@@ -192,6 +203,8 @@
             localStorage.removeItem('cookiesAccepted');
             document.getElementById('cookieBanner').style.display = 'none';
         }
+        let bandsintownLoaded = false;
+
         function loadEmbeds() {
             document.querySelectorAll('.lazy-embed').forEach(iframe => {
                 iframe.src = iframe.dataset.src;
@@ -200,6 +213,23 @@
             document.querySelectorAll('.embed-placeholder').forEach(p => {
                 p.style.display = 'none';
             });
+
+            // Bandsintown widget
+            if (!bandsintownLoaded) {
+                bandsintownLoaded = true;
+                const container = document.getElementById('bit-widget-container');
+                container.style.display = 'block';
+                const widget = document.createElement('a');
+                widget.className = 'bit-widget-initializer';
+                widget.dataset.artistName = 'id_15655258';
+                widget.dataset.appId = '1a47f4992e2a498eb68a34ac1f1f2947';
+                widget.dataset.playMyCityPosition = 'bottom';
+                container.appendChild(widget);
+                const script = document.createElement('script');
+                script.charset = 'utf-8';
+                script.src = 'https://widgetv3.bandsintown.com/main.min.js';
+                document.body.appendChild(script);
+            }
         }
         // Lightbox
         const lb = document.getElementById('lightbox');
